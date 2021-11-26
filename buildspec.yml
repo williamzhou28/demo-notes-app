@@ -23,6 +23,8 @@ phases:
     commands:
       - echo "Running SST Build"
       - cd frontend && npm install
+      - npx sst test
+      - npx sst deploy --stage aws-dev-notes --region eu-west-2 --verbose
 
   post_build:
     commands:
